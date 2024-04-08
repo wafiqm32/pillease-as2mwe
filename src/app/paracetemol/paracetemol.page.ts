@@ -16,7 +16,7 @@ import { arrowBackCircleOutline } from 'ionicons/icons'; // Changed from 'arrow-
 export class ParacetemolPage implements OnInit{
 
   constructor() {
-    addIcons({ arrowBackCircleOutline }); // Corrected the icon name to match with the import statement
+    addIcons({ arrowBackCircleOutline }) ; // Corrected the icon name to match with the import statement
   }
 
   ngOnInit() {
