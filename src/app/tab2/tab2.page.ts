@@ -41,7 +41,7 @@ export class Tab2Page {
       image: '../../assets/paracetemol.png' // Add this line with the path to your image
     };
     this.cardService.addCard(cardData);
-    this.presentToast('Lanzopazole added successfully.');
+    this.presentToast('Lanzopazole added successfully. THANK YOU FOR YOUR IDEA SIR');
   }
 }
   
