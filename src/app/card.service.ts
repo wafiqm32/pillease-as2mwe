@@ -25,7 +25,7 @@ export class CardService {
     const cardIndex = this.cards.findIndex(card => card.title === cardData.title && card.description === cardData.description);
     
     if (cardIndex !== -1) {
-      this.cards.splice(cardIndex, 1);
+      this.cards.splice(cardIndex, 1) ;
     }
   }
 }
