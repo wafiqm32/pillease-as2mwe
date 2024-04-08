@@ -22,7 +22,7 @@ export class Tab2Page {
       image: '../../assets/paracetemol.png' // Add this line with the path to your image
     };
     console.log('Adding card:', cardData);
-    this.cardService.addCard(cardData);
+    this.cardService.addCard(cardData) ;
   }
 
   onAddAnotherCard() {
