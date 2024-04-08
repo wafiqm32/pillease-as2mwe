@@ -1,0 +1,53 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <div style="display: flex; justify-content: center;">
+    <img src="../../assets/pilleaten.png" alt="pilleaten" width="8%" height="8%">
+  </div>
+  <div style="position: relative;">
+    <h1 style="color: red;">Hi Wafiq,</h1>
+    <h1 style="color: black;">Goodmorning sayang ❤️</h1>
+    <ion-button style="position: absolute; top: 0; right: 0; width: 100px; height: 100px;" color="light" [routerLink]="['/profile']" transparent>
+      <ion-card>
+        <img src="../../assets/profile.png" alt="">
+      </ion-card>
+    </ion-button>
+    <hr style="border-top: 3px solid black;">
+  </div>
+  <ion-card style="background-color: red;">
+
+   
+    <h4 style="color: white;">Email</h4>
+    <ion-card style="background-color: white;">
+      <ion-card-content>
+        <ion-card-title>
+          <h1 style="color: grey;">Wafiq3222gmail.com</h1>
+        </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+    <!-- Duplicated email address -->
+    <h4 style="color: white;">Password</h4>
+    <ion-card style="background-color: white;">
+      <ion-card-content>
+        <ion-card-title>
+          <h1 style="color: grey;">**********</h1>
+        </ion-card-title>
+        
+      </ion-card-content>
+    </ion-card >
+    <ion-button color="dark" [routerLink]="['/logout']" transparent>
+      LOGOUT
+    </ion-button>
+
+    <ion-button color="dark" [routerLink]="['/historylog']" transparent>
+      HISTORY LOG
+    </ion-button>
+  </ion-card>
+
+  
+  
+</ion-content>

@@ -1,17 +1,54 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div style="display: flex; justify-content: center;">
+    <img src="../../assets/pilleaten.png" alt="pilleaten" width="8%" height="8%">
+  </div>
+  <div>
+    <ion-button style="position: absolute; top: 0; right: 0; width: 100px; height: 100px;" color="light" [routerLink]="['/profile']" transparent>
+    <ion-card> <img src="../../assets/profile.png"  alt=""> </ion-card>
+  </ion-button>
+  </div>
+  <div>
+  <h1 style="color: red;">Hi Wafiq,</h1> </div>
+  <div>
+  <h1 style="color: black;">Goodmorning sayang ❤️</h1></div>
+  <hr style="border-top: 3px solid black;">
+  <ion-card>
+<div>
+  <h1 style="display: flex; justify-content: center; color: black; font-weight: bold;" >Calender</h1>
+ <div style="display: flex; justify-content: center"> <ion-datetime></ion-datetime> </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+</div>
+</ion-card>
+<div>
+  <article>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <h1 style="font-weight: bold;">Pills Reminder</h1>
+      <ion-button style="margin-left: 10px;" color="dark" [routerLink]="['/tabs/tab2']" transparent>+</ion-button>
+    </div>
+    <ion-card *ngFor="let card of cards; let i = index"><ion-card-header>
+      <ion-card-title>{{ card.title }}</ion-card-title>
+      <ion-img [src]="card.image" style="float: right; width: 8%; height: 8%;"></ion-img>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ card.description }}
+      <ion-button color="danger" (click)="deleteCard(i)">-</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  </article>
+
+  <div>
+ 
+  </div>
+
+    <ion-content></ion-content>
+  </div>
+

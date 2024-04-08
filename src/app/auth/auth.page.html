@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="position: relative;">
+
+  </div>
+
+  <div style="display: flex; justify-content: center;">
+    <img src="../../assets/clock.png" alt="pilleaten" width="30%" height="30%">
+  </div>
+
+
+  <div style="display: flex; justify-content: center;">
+    <img src="../../assets/pilleaten.png" alt="pilleaten" width="9%" height="9%">
+  </div>
+  <ion-button color="light" style=" position: absolute; top: 0; right: 0;" [routerLink]="['/guideline']">USER GUIDELINE</ion-button>
+
+  <hr style="border-top: 3px solid black;">
+<div>
+
+<ion-card style="background-color: red;">
+
+  <ion-card style="background-color: red;">
+
+
+  <ion-card-content>
+    <ion-card-title>
+   
+      <ion-item>
+        <ion-input [(ngModel)]="email" placeholder="Email"></ion-input>
+    
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+      
+    </ion-item>
+    </ion-card-title>
+    <ion-card-subtitle>
+
+    </ion-card-subtitle>
+    <ion-card-content>
+
+    </ion-card-content>
+    <ion-button style="background-color: grey; color: white;" [disabled]="!email || !password" (click)="onLogin()" [routerLink]="['/tabs/tab1']">LOGIN</ion-button>
+    <ion-button style="background-color: grey; color: white;" [routerLink]="['/logout']">LOGOUT</ion-button>
+  </ion-card-content>
+
+
+</ion-card>
+
+
+
