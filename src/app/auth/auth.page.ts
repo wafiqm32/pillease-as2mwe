@@ -23,7 +23,7 @@ export class AuthPage implements OnInit {
 
   onLogin() {
     const correctEmail = 'Wafiq3222@gmail.com';
-    const correctPassword = '12345678';
+    const correctPassword = '12345678 ';
   
     if (this.email === correctEmail && this.password === correctPassword ) {
       // Navigate to Tab1Page
