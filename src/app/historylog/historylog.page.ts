@@ -22,7 +22,7 @@ export class HistorylogPage {
 
   
   goToParacetamolPage() {
-    this.router.navigate(['/paracetamol']);
+    this.router.navigate(['/paracetamol']) ;
   }
 }
 
