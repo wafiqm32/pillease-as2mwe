@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonCardTitle, IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonCard, IonDatetime, IonCardContent, IonCardSubtitle} from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { CardService } from '../card.service';
+import { ToastController } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -12,8 +13,15 @@ import { RouterLink } from '@angular/router';
   imports: [RouterLink, IonCardTitle, IonCard, IonCardContent, IonCardSubtitle,IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, IonButton, IonCard, IonDatetime ]
 })
 export class Tab2Page {
+  constructor(public toastController: ToastController, private cardService: CardService) {}
 
-  constructor(private cardService: CardService) {}
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000
+    });
+    toast.present();
+  }
 
   onAddCard() {
     const cardData = {
@@ -22,7 +30,8 @@ export class Tab2Page {
       image: '../../assets/paracetemol.png' // Add this line with the path to your image
     };
     console.log('Adding card:', cardData);
-    this.cardService.addCard(cardData) ;
+    this.cardService.addCard(cardData);
+    this.presentToast('Paracetemol added successfully.');
   }
 
   onAddAnotherCard() {
@@ -32,6 +41,7 @@ export class Tab2Page {
       image: '../../assets/paracetemol.png' // Add this line with the path to your image
     };
     this.cardService.addCard(cardData);
+    this.presentToast('Lanzopazole added successfully.');
   }
 }
   
