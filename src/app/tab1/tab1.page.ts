@@ -31,12 +31,12 @@ export class Tab1Page {
 
   async showAlert(cardData: any) {
     const alert = await this.alertController.create({
-      header: 'Warning',
-      message: `Already added`,
+      header: '',
+      message: `Already added love😂`,
       buttons: ['OK']
     });
 
-    await alert.present();
+    await alert.present() ;
   }
 
   deleteCard(index: number) {
